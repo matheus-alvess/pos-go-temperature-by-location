@@ -1,0 +1,7 @@
+services:
+  pos-go-temperature-by-location:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - WEATHER_API_KEY=0221a1d62222490882322259242305
