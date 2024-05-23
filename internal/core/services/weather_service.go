@@ -1,6 +1,7 @@
 package services
 
 import (
+	"math"
 	"pos-go-temperature-by-location/internal/core/domain"
 	"pos-go-temperature-by-location/internal/ports"
 )
@@ -32,8 +33,8 @@ func (s *WeatherService) GetWeather(cep string) (*domain.Temperature, error) {
 	tempK := tempC + 273.15
 
 	return &domain.Temperature{
-		TempC: tempC,
-		TempF: tempF,
-		TempK: tempK,
+		TempC: math.Round(tempC*10) / 10,
+		TempF: math.Round(tempF*10) / 10,
+		TempK: math.Round(tempK*10) / 10,
 	}, nil
 }

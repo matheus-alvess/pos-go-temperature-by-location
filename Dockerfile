@@ -8,7 +8,7 @@ RUN go mod download
 COPY . .
 
 RUN go test ./... -v
-RUN go build -o /pos-go-temperature-by-location
+RUN go build -o /pos-go-temperature-by-location cmd/server/main.go
 
 EXPOSE 8080
 
