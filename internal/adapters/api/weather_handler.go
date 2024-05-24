@@ -3,17 +3,17 @@ package api
 import (
 	"fmt"
 	"net/http"
-	"pos-go-temperature-by-location/internal/core/services"
+	"pos-go-temperature-by-location/internal/ports"
 	"strconv"
 
 	"github.com/gin-gonic/gin"
 )
 
 type WeatherHandler struct {
-	weatherService *services.WeatherService
+	weatherService ports.WeatherService
 }
 
-func NewWeatherHandler(weatherService *services.WeatherService) *WeatherHandler {
+func NewWeatherHandler(weatherService ports.WeatherService) *WeatherHandler {
 	return &WeatherHandler{weatherService: weatherService}
 }
 
