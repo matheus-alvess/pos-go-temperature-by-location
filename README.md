@@ -63,6 +63,14 @@ Respostas
 }
 ```
 
+## Como consumir a aplicação via endereço do Google Cloud Run
+
+Para consumir a app remota, use o comando:
+
+```sh
+curl --location 'https://pos-go-temperature-by-location-55m3s6neja-uc.a.run.app/weather/08410210'
+```
+
 ## Como Executar Testes Unitários
 
 Para rodar os testes unitários da aplicação, use o comando:
